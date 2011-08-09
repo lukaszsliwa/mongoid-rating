@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "mongoid-rating"
   gem.homepage = "http://github.com/mrplum/mongoid-rating"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Rating solution for mongoid}
+  gem.description = %Q{Simple rating solution for mongoid}
   gem.email = "lukasz.sliwa@gmail.com"
   gem.authors = ["Łukasz Śliwa"]
   # dependencies defined in Gemfile
