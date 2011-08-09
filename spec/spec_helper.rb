@@ -1,14 +1,11 @@
-
-require 'rubygems'
-require 'spec/spec'
-require "mongoid"
-require "mongoid_voteable"
-require "rspec"
-require "database_cleaner"
-
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-require 'mongoid-rating'
+
+require 'rubygems'
+require "mongoid"
+require "mongoid-rating"
+require "rspec"
+require "database_cleaner"
 
 MODELS = File.join(File.dirname(__FILE__), "models")
 
@@ -19,7 +16,7 @@ Mongoid.logger = Logger.new($stdout)
 
 DatabaseCleaner.orm = "mongoid"
 
-Rspec.configure do |config|
+RSpec.configure do |config|
   config.before(:all) do
     DatabaseCleaner.strategy = :truncation
   end
