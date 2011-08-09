@@ -37,6 +37,7 @@ module Mongoid
       end
 
       def rates_average
+        return 0 if rates_count == 0
         rates_sum / rates_count.to_f
       end
     end

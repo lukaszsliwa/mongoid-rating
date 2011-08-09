@@ -37,9 +37,14 @@ describe Mongoid::Rating do
   end
 
   it "should check rates_* methods" do
+    photo.rates_count.should == 0
+    photo.rates_sum.should == 0
+    photo.rates_average.should == 0
+
     { adam => 1, lucas => 5, tom => 7}.map { |by, value|
       photo.rate(:by => by, :value => value)
     }
+    
     photo.rates_count.should == 3
     photo.rates_sum.should == 13
     photo.rates_average.should == (1+5+7)/3.0
