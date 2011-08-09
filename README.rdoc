@@ -2,7 +2,31 @@
 
 Rating solution for mongoid.
 
-= usage
+= Usage
+
+    class User
+        include Mongoid::Document
+    end
+
+    class Photo
+        include Mongoid::Document
+        include Mongoid::Rating
+    end
+
+Do you want rate a photo as a user? Just type:
+
+    photo.rate(:by => user, :value => 10).save
+
+    or
+
+    photo.rate!(:by => user, :value => 10) # same as above
+
+mongoid-rating store information about user and score in :rates field. Some useful methods:
+
+    photo.rated?(:by => user)   # should return true if user rate a photo
+    photo.rates_count
+    photo.rates_average
+    photo.rates_sum
 
 == Copyright
 
