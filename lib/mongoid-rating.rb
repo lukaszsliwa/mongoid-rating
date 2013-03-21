@@ -40,6 +40,10 @@ module Mongoid
         return 0 if rates_count == 0
         rates_sum / rates_count.to_f
       end
+
+      def rates_percent
+        (rates_average * 100).round
+      end
     end
   end
 end
