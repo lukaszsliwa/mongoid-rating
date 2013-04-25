@@ -27,6 +27,7 @@ mongoid-rating store information about user and score in :rates field. Some usef
     photo.rates_count
     photo.rates_average
     photo.rates_sum
+    photo.rates_percent # if you are using 1 for each rate up and 0 for each rate down this will give you a good percentage of likes.
 
 == Copyright
 
